@@ -37,14 +37,14 @@ const CategoryProducts = () => {
         </div>
         <div>
           <Link 
-            to="/categories" 
+            to="/dashboard/categories" 
             className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2"
           >
             Back to Categories
           </Link>
           <Link 
-            to="/products/create" 
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            to="/dashboard/products/create" 
+            className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
           >
             Add Product
           </Link>
@@ -82,13 +82,13 @@ const CategoryProducts = () => {
                     </td>
                     <td className="py-2 px-4">
                       <Link 
-                        to={`/products/${product.id}`}
+                        to={`/dashboard/products/${product.id}`}
                         className="text-blue-600 hover:underline mr-2"
                       >
                         View
                       </Link>
                       <Link 
-                        to={`/products/edit/${product.id}`}
+                        to={`/dashboard/products/edit/${product.id}`}
                         className="text-green-600 hover:underline"
                       >
                         Edit

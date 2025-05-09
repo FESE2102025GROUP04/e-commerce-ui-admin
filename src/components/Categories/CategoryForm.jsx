@@ -57,7 +57,7 @@ const CategoryForm = () => {
 
       setSuccess(true);
       setTimeout(() => {
-        navigate('/categories');
+        navigate('/dashboard/categories');
       }, 1000);
     } catch (err) {
       setError(`Failed to ${isEditing ? 'update' : 'create'} category`);
@@ -115,14 +115,14 @@ const CategoryForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {loading ? 'Processing...' : isEditing ? 'Update Category' : 'Create Category'}
             </button>
             
             <button
               type="button"
-              onClick={() => navigate('/categories')}
+              onClick={() => navigate('/dashboard/categories')}
               className="ml-4 bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400"
             >
               Cancel

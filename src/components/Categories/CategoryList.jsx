@@ -51,8 +51,8 @@ const CategoryList = () => {
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold">Category Management</h2>
         <Link 
-          to="/categories/create" 
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          to="/dashboard/categories/create" 
+          className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
         >
           Create New Category
         </Link>
@@ -70,7 +70,7 @@ const CategoryList = () => {
             />
             <button 
               type="submit" 
-              className="bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700"
+              className="bg-gray-600 text-white px-4 py-2 rounded-r hover:bg-gray-700"
             >
               Search
             </button>
@@ -103,13 +103,13 @@ const CategoryList = () => {
                     </td>
                     <td className="py-2 px-4">
                       <Link 
-                        to={`/categories/${category.id}/products`}
+                        to={`/dashboard/categories/${category.id}/products`}
                         className="text-blue-600 hover:underline mr-2"
                       >
-                        Products
+                        View
                       </Link>
                       <Link 
-                        to={`/categories/edit/${category.id}`}
+                        to={`/dashboard/categories/edit/${category.id}`}
                         className="text-green-600 hover:underline"
                       >
                         Edit

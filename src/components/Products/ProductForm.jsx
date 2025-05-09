@@ -152,7 +152,7 @@ const ProductForm = () => {
       
       setSuccess(true);
       setTimeout(() => {
-        navigate('/products');
+        navigate('/dashboard/products');
       }, 1500);
     } catch (err) {
       setError(`Failed to ${isEditing ? 'update' : 'create'} product`);
@@ -304,7 +304,7 @@ const ProductForm = () => {
                 {isUploading && (
                   <div className="w-full mb-4">
                     <div className="bg-gray-200 rounded-full h-2 dark:bg-gray-700 w-full mb-1">
-                      <div className="bg-blue-600 h-2 rounded-full" style={{ width: `${uploadProgress}%` }}></div>
+                      <div className="bg-gray-600 h-2 rounded-full" style={{ width: `${uploadProgress}%` }}></div>
                     </div>
                     <p className="text-xs text-gray-500 text-center">{uploadProgress}% Uploaded</p>
                   </div>
@@ -340,14 +340,14 @@ const ProductForm = () => {
             <button
               type="submit"
               disabled={loading || isUploading}
-              className={`bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 ${(loading || isUploading) ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 ${(loading || isUploading) ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {loading ? 'Processing...' : isEditing ? 'Update Product' : 'Create Product'}
             </button>
             
             <button
               type="button"
-              onClick={() => navigate('/products')}
+              onClick={() => navigate('/dashboard/products')}
               className="ml-4 bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400"
             >
               Cancel

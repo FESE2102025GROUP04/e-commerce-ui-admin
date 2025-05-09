@@ -87,7 +87,7 @@ const ProductList = () => {
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold">Product Management</h2>
         <Link 
-          to="/products/create" 
+          to="/dashboard/products/create" 
           className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
         >
           Create New Product
@@ -181,13 +181,13 @@ const ProductList = () => {
                     </td>
                     <td className="py-2 px-4">
                       <Link 
-                        to={`/products/${product.id}`}
+                        to={`/dashboard/products/${product.id}`}
                         className="text-blue-600 hover:underline mr-2"
                       >
                         View
                       </Link>
                       <Link 
-                        to={`/products/edit/${product.id}`}
+                        to={`/dashboard/products/edit/${product.id}`}
                         className="text-green-600 hover:underline"
                       >
                         Edit

@@ -34,14 +34,14 @@ const ProductDetail = () => {
         <h2 className="text-2xl font-semibold">Product Detail</h2>
         <div>
           <Link 
-            to="/products" 
+            to="/dashboard/products" 
             className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 mr-2"
           >
             Back to List
           </Link>
           <Link 
-            to={`/products/edit/${product.id}`}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            to={`/dashboard/products/edit/${product.id}`}
+            className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
           >
             Edit Product
           </Link>

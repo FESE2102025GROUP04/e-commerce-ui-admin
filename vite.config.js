@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    port: 3000,
+    port: 6001,
     proxy: {
       '/api': {
         target: 'https://group4-api.camtech-dev.online',
